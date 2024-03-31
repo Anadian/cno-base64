@@ -1,6 +1,6 @@
 {
 	"name": "cno-base64",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Micropackage: convert between a NodeJS Buffer and a base64-encoded string with optional URL-safe alphabet, padding, and MultiBase prefix.",
 	"repository": {
 		"type": "git",
