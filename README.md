@@ -17,7 +17,17 @@
 - [License](#License)
 # Background
 # Install
+Available on the [npm registry](https://www.npmjs.com/package/cno-base64) as `cno-base64`.
+Adding it to project using [pnpm](https://pnpm.io/cli/add):
+```sh
+pnpm add --save cno-base64
+```
+It can, of course, also be installed by [npm](https://docs.npmjs.com/cli/v8/commands/npm-install) or [yarn](https://yarnpkg.com/getting-started/usage) using the normal methods.
 # Usage
+```js
+import Base64NS from 'cno-base64'; // Default export is a full "namespace".
+import { getBase64FromBuffer, getBufferFromBase64 } from 'cno-base64'; // Just the functions.
+```
 # API
 # Contributing
 Changes are tracked in [CHANGELOG.md](CHANGELOG.md).
