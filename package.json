@@ -16,9 +16,9 @@
 		"node": ">=18"
 	},
 	"bugs": {
-		"url": "/issues"
+		"url": "https://github.com/Anadian/cno-base64/issues"
 	},
-	"homepage": "#readme",
+	"homepage": "https://github.com/Anadian/cno-base64#readme",
 	"keywords": [
 		"libre",
 		"free",
@@ -35,7 +35,7 @@
 		"multibase"
 	],
 	"scripts": {
-		"test": "node --test ./src/main.test.js",
+		"test": "node --test ./src/lib.test.js",
 		"coverage": "c8 pnpm test",
 		"coverage-report": "c8 report -r=text-lcov > coverage/lcov.txt",
 		"do-ci": "pnpm coverage && pnpm coverage-report",
