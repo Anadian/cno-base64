@@ -34,9 +34,8 @@ Documentation License: [![Creative Commons License](https://i.creativecommons.or
 	import * as NamespaceExport from './lib.js';
 	import { getBase64FromBuffer, getBufferFromBase64 } from './lib.js';
 	//## Standard
-	import Test from 'node:test';
-	import Assert from 'node:assert/strict';
 	//## External
+	import Test from 'cno-test';
 //# Constants
 const FILENAME = 'lib.test.js';
 const LOREM_BUFFER = Buffer.from( "Lorem ipsum dolor sit amet biam. ~~~\u00ff\u00ff" );
@@ -44,26 +43,7 @@ const LOREM_BUFFER = Buffer.from( "Lorem ipsum dolor sit amet biam. ~~~\u00ff\u0
 
 //# Global Variables
 /**## Functions*/
-function errorExpected( expected, received ){
-	//console.error( "%o", received );
-	if( received instanceof expected.instanceOf ){
-		if( received.code === expected.code ){
-			return true;
-		}
-	}
-	return Assert.fail(`received: ${received}\nexpected:${expected}\n`);
-}
-/*Test( 'FullTest', function( t ){
-	t.diagnostic( t.name );
-	const expected = ( error ) => {
-		instanceOf: TypeError,
-		code: 'ERR_INVALID_ARG_TYPE'
-	};
-	const input_function = LoggerNS.initLogger.bind( null, 0 );
-	const validator_function = errorExpected.bind( null, expected );
-	Assert.throws( input_function, validator_function );
-} );*/
-Test( 'getBase64FromBuffer:throws', function( t ){
+Test.test( 'getBase64FromBuffer:throws', function( t ){
 	t.diagnostic( t.name );
 	const test_matrix = {
 		functions: {
@@ -108,12 +88,12 @@ Test( 'getBase64FromBuffer:throws', function( t ){
 			t.diagnostic( `${t.name}:${function_key}:${condition_key}` );
 			var condition = test_matrix.conditions[condition_key];
 			var bound_function = input_function.bind( null, ...condition.args );
-			var validator_function = errorExpected.bind( null, condition.expected );
-			Assert.throws( bound_function, validator_function );
+			var validator_function = Test.errorExpected.bind( null, condition.expected );
+			Test.assert.throws( bound_function, validator_function );
 		}
 	}
 } );
-Test( 'getBase64FromBuffer:returns', function( t ){
+Test.test( 'getBase64FromBuffer:returns', function( t ){
 	t.diagnostic( t.name );
 	var test_matrix = {
 		functions: {
@@ -197,12 +177,12 @@ Test( 'getBase64FromBuffer:returns', function( t ){
 			t.diagnostic( `${t.name}:${function_key}:${condition_key}` );
 			var condition = test_matrix.conditions[condition_key];
 			var function_return = input_function.apply( null, condition.args );
-			//var validator_function = errorExpected.bind( null, condition.expected );
-			Assert.deepStrictEqual( function_return, condition.expected );
+			//var validator_function = Test.errorExpected.bind( null, condition.expected );
+			Test.assert.deepStrictEqual( function_return, condition.expected );
 		}
 	}
 } );
-Test( 'getBufferFromBase64:throws', function( t ){
+Test.test( 'getBufferFromBase64:throws', function( t ){
 	t.diagnostic( t.name );
 	const test_matrix = {
 		functions: {
@@ -247,12 +227,12 @@ Test( 'getBufferFromBase64:throws', function( t ){
 			t.diagnostic( `${t.name}:${function_key}:${condition_key}` );
 			var condition = test_matrix.conditions[condition_key];
 			var bound_function = input_function.bind( null, ...condition.args );
-			var validator_function = errorExpected.bind( null, condition.expected );
-			Assert.throws( bound_function, validator_function );
+			var validator_function = Test.errorExpected.bind( null, condition.expected );
+			Test.assert.throws( bound_function, validator_function );
 		}
 	}
 } );
-Test( 'getBufferFromBase64:returns', function( t ){
+Test.test( 'getBufferFromBase64:returns', function( t ){
 	t.diagnostic( t.name );
 	var test_matrix = {
 		functions: {
@@ -315,8 +295,8 @@ Test( 'getBufferFromBase64:returns', function( t ){
 			t.diagnostic( `${t.name}:${function_key}:${condition_key}` );
 			var condition = test_matrix.conditions[condition_key];
 			var function_return = input_function.apply( null, condition.args );
-			//var validator_function = errorExpected.bind( null, condition.expected );
-			Assert.deepStrictEqual( function_return, condition.expected );
+			//var validator_function = Test.errorExpected.bind( null, condition.expected );
+			Test.assert.deepStrictEqual( function_return, condition.expected );
 		}
 	}
 } );

@@ -8,6 +8,9 @@ devDependencies:
   c8:
     specifier: ^9.1.0
     version: 9.1.0
+  cno-test:
+    specifier: ^0.0.1
+    version: 0.0.1
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -775,6 +778,11 @@ packages:
       string-width: 4.2.3
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
+    dev: true
+
+  /cno-test@0.0.1:
+    resolution: {integrity: sha512-7GXw2MAjoaLb2gxBJZKf7adBxciVppoEcpv7qo9Uq2B3gb2mUSbwo3jdj+niM/tBKiE7uxMmQIQ9hytzKeNMyA==}
+    engines: {node: '>=18'}
     dev: true
 
   /color-convert@1.9.3:
