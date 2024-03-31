@@ -213,10 +213,10 @@ function getBufferFromBase64( input_string, input_options = {} ){
 		}
 		try{
 			_return = Buffer.from( base64_string, 'base64' );
-		} catch(error){
+		} catch(error) /* c8 ignore start */ {
 			return_error = new Error(`Buffer.from threw an error: ${error}`);
 			throw return_error;
-		}
+		} /* c8 ignore stop */
 	} // noop
 	//Return
 	this?.logger?.log({file: FILENAME, function: FUNCTION_NAME, level: 'debug', message: `returned: ${_return}`});
