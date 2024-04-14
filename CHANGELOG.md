@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.5](https://github.com/Anadian/cno-base64/compare/v0.0.4...v0.0.5) (2024-04-14)
+
+
+### Documentation
+
+* Fixed README.md. ([addfdf0](https://github.com/Anadian/cno-base64/commit/addfdf064bc16305f69e944029f144455ac1f2b6))
+
 ### [0.0.4](https://github.com/Anadian/cno-base64/compare/v0.0.3...v0.0.4) (2024-03-31)
 
 
