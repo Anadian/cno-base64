@@ -3,6 +3,7 @@
 [![Semantic Versioning 2.0.0](https://img.shields.io/badge/semver-2.0.0-brightgreen?style=flat-square)](https://semver.org/spec/v2.0.0.html)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 [![License](https://img.shields.io/github/license/Anadian/cno-base64)](https://github.com/Anadian/cno-base64/blob/main/LICENSE)
+[![ci](https://github.com/Anadian/cno-base64/actions/workflows/ci.yml/badge.svg)](https://github.com/Anadian/cno-base64/actions/workflows/ci.yml)
 [![NPM Version](https://img.shields.io/npm/v/cno-base64)](https://www.npmjs.com/package/cno-base64)
 [![Coverage Status](https://coveralls.io/repos/github/Anadian/cno-base64/badge.svg?branch=main)](https://coveralls.io/github/Anadian/cno-base64?branch=main)
 
@@ -18,7 +19,7 @@
 # Background
 # Install
 Available on the [npm registry](https://www.npmjs.com/package/cno-base64) as `cno-base64`.
-Adding it to project using [pnpm](https://pnpm.io/cli/add):
+Add it to project with [pnpm](https://pnpm.io/cli/add):
 ```sh
 pnpm add --save cno-base64
 ```
